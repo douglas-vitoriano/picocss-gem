@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.executables   = ["bridgetown-picocss"]
+  spec.bindir        = "exe"
 
   spec.add_dependency "rails", ">= 7.0", "< 9.0"
   spec.add_dependency "bridgetown", ">= 1.0", "< 3.0"

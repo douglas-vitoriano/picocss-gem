@@ -1,0 +1,70 @@
+name: Build, Publish & Verify RubyGem
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build_and_publish:
+    name: Build + Publish Gem
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby 3.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+
+      - name: Build gem
+        run: gem build *.gemspec
+
+      - name: Publish gem to RubyGems
+        env:
+          GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
+        run: |
+          mkdir -p ~/.gem
+          printf "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+          gem push *.gem
+
+  verify_integrity:
+    name: Verify Published Gem Integrity
+    runs-on: ubuntu-22.04
+    needs: build_and_publish
+
+    steps:
+      - name: Set up Ruby 3.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+
+      - name: Fetch latest gem
+        run: |
+          GEM_NAME=picocss-gem
+          GEM_VERSION=0.2.0
+          gem fetch $GEM_NAME -v $GEM_VERSION
+          echo "Downloaded ${GEM_NAME}-${GEM_VERSION}.gem"
+
+      - name: Calculate and verify SHA-256
+        env:
+          OFFICIAL_SHA: ${{ secrets.OFFICIAL_SHA_256 }}
+        run: |
+          GEM_NAME=picocss-gem
+          GEM_VERSION=0.2.0
+          REMOTE_FILE="${GEM_NAME}-${GEM_VERSION}.gem"
+          REMOTE_SHA=$(shasum -a 256 $REMOTE_FILE | cut -d ' ' -f1)
+          echo "SHA-256 of downloaded gem: $REMOTE_SHA"
+
+          if [ "$REMOTE_SHA" != "$OFFICIAL_SHA" ]; then
+            echo "❌ SHA-256 mismatch! Published gem may be corrupted or modified."
+            exit 1
+          else
+            echo "✅ SHA-256 match! Published gem is correct."
+          fi
