@@ -77,25 +77,25 @@ bin/rails generate picocss:install_<color>
 ```
 
 | Theme   | Color |
-| -------- | ------ |
-| red     | <img src="https://via.placeholder.com/15/ff0000/ffffff?text=+" /> |
-| pink    | <img src="https://via.placeholder.com/15/ffc0cb/000000?text=+" /> |
-| fuchsia | <img src="https://via.placeholder.com/15/ff00ff/ffffff?text=+" /> |
-| purple  | <img src="https://via.placeholder.com/15/800080/ffffff?text=+" /> |
-| violet  | <img src="https://via.placeholder.com/15/ee82ee/000000?text=+" /> |
-| indigo  | <img src="https://via.placeholder.com/15/4b0082/ffffff?text=+" /> |
-| blue    | <img src="https://via.placeholder.com/15/0000ff/ffffff?text=+" /> |
-| cyan    | <img src="https://via.placeholder.com/15/00ffff/000000?text=+" /> |
-| jade    | <img src="https://via.placeholder.com/15/2e8b57/ffffff?text=+" /> |
-| green   | <img src="https://via.placeholder.com/15/008000/ffffff?text=+" /> |
-| lime    | <img src="https://via.placeholder.com/15/00ff00/000000?text=+" /> |
-| yellow  | <img src="https://via.placeholder.com/15/ffff00/000000?text=+" /> |
-| pumpkin | <img src="https://via.placeholder.com/15/ff8c00/ffffff?text=+" /> |
-| orange  | <img src="https://via.placeholder.com/15/ffa500/ffffff?text=+" /> |
-| sand    | <img src="https://via.placeholder.com/15/f4a460/000000?text=+" /> |
-| grey    | <img src="https://via.placeholder.com/15/808080/ffffff?text=+" /> |
-| zinc    | <img src="https://via.placeholder.com/15/a9a9a9/ffffff?text=+" /> |
-| slate   | <img src="https://via.placeholder.com/15/708090/ffffff?text=+" /> |
+| ------- | ----- |
+| red     | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ff0000'/></svg>" /> |
+| pink    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ffc0cb'/></svg>" /> |
+| fuchsia | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ff00ff'/></svg>" /> |
+| purple  | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23800080'/></svg>" /> |
+| violet  | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ee82ee'/></svg>" /> |
+| indigo  | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%234b0082'/></svg>" /> |
+| blue    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%230000ff'/></svg>" /> |
+| cyan    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%2300ffff'/></svg>" /> |
+| jade    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%232e8b57'/></svg>" /> |
+| green   | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23008000'/></svg>" /> |
+| lime    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%2300ff00'/></svg>" /> |
+| yellow  | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ffff00'/></svg>" /> |
+| pumpkin | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ff8c00'/></svg>" /> |
+| orange  | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23ffa500'/></svg>" /> |
+| sand    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23f4a460'/></svg>" /> |
+| grey    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23808080'/></svg>" /> |
+| zinc    | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23a9a9a9'/></svg>" /> |
+| slate   | <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><rect width='15' height='15' rx='3' ry='3' fill='%23708090'/></svg>" /> |
 
 Example:
 
