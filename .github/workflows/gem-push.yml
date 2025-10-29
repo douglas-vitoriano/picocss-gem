@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build + Publish
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
       packages: write
@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Ruby 3.2
-      uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.2.0
 
