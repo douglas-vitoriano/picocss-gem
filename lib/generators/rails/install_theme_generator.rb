@@ -1,5 +1,3 @@
-# lib/picocss/install_theme_generator.rb
-
 module Picocss
   module Generators
     themes = %w[

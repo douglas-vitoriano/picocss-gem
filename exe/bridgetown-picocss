@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# exe/bridgetown-picocss
+
+require "picocss/generators/bridgetown/install_theme_generator"
+require "picocss/generators/bridgetown/template_login_generator"
+
+command = ARGV[0]&.downcase
+param   = ARGV[1] # Nome do tema, se fornecido
+
+case command
+when "theme"
+  Picocss::Generators::InstallThemeGenerator.generate(param || "min")
+when "login"
+  Picocss::Generators::TemplateLoginGenerator.generate
+else
+  puts "Uso: bridgetown-picocss [theme <cor>|login]"
+  puts
+  puts "Exemplos:"
+  puts "  bridgetown-picocss theme blue"
+  puts "  bridgetown-picocss login"
+end

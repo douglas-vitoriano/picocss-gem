@@ -13,8 +13,10 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
-  spec.files         = Dir["lib/**/*", "vendor/assets/**/*", "README.md"]
+  spec.files         = Dir["lib/**/*", "vendor/assets/**/*", "exe/*", "README.md"]
   spec.require_paths = ["lib"]
+
+  spec.executables   = ["bridgetown-picocss"]
 
   spec.add_dependency "rails", ">= 7.0", "< 9.0"
   spec.add_dependency "bridgetown", ">= 1.0", "< 3.0"
