@@ -76,26 +76,26 @@ rails server
 bin/rails generate picocss:install_<color>
 ```
 
-| Theme   | Color                                                                                                       |
-| ------- | ----------------------------------------------------------------------------------------------------------- |
-| red     | <span style="background-color:red; color:white; padding:2px 6px; border-radius:4px;">__</span>             |
-| pink    | <span style="background-color:pink; color:black; padding:2px 6px; border-radius:4px;">__</span>           |
-| fuchsia | <span style="background-color:fuchsia; color:white; padding:2px 6px; border-radius:4px;">__</span>     |
-| purple  | <span style="background-color:purple; color:white; padding:2px 6px; border-radius:4px;">__</span>       |
-| violet  | <span style="background-color:violet; color:black; padding:2px 6px; border-radius:4px;">__</span>       |
-| indigo  | <span style="background-color:indigo; color:white; padding:2px 6px; border-radius:4px;">__</span>       |
-| blue    | <span style="background-color:blue; color:white; padding:2px 6px; border-radius:4px;">__</span>           |
-| cyan    | <span style="background-color:cyan; color:black; padding:2px 6px; border-radius:4px;">__</span>           |
-| jade    | <span style="background-color:mediumseagreen; color:white; padding:2px 6px; border-radius:4px;">__</span> |
-| green   | <span style="background-color:green; color:white; padding:2px 6px; border-radius:4px;">__</span>         |
-| lime    | <span style="background-color:lime; color:black; padding:2px 6px; border-radius:4px;">__</span>           |
-| yellow  | <span style="background-color:yellow; color:black; padding:2px 6px; border-radius:4px;">__</span>       |
-| pumpkin | <span style="background-color:darkorange; color:white; padding:2px 6px; border-radius:4px;">__</span>  |
-| orange  | <span style="background-color:orange; color:white; padding:2px 6px; border-radius:4px;">__</span>       |
-| sand    | <span style="background-color:sandybrown; color:black; padding:2px 6px; border-radius:4px;">__</span>     |
-| grey    | <span style="background-color:grey; color:white; padding:2px 6px; border-radius:4px;">__</span>           |
-| zinc    | <span style="background-color:darkgray; color:white; padding:2px 6px; border-radius:4px;">__</span>       |
-| slate   | <span style="background-color:slategray; color:white; padding:2px 6px; border-radius:4px;">__</span>     |
+| Theme   | Color |
+| -------- | ------ |
+| red     | <img src="https://via.placeholder.com/15/ff0000/ffffff?text=+" /> |
+| pink    | <img src="https://via.placeholder.com/15/ffc0cb/000000?text=+" /> |
+| fuchsia | <img src="https://via.placeholder.com/15/ff00ff/ffffff?text=+" /> |
+| purple  | <img src="https://via.placeholder.com/15/800080/ffffff?text=+" /> |
+| violet  | <img src="https://via.placeholder.com/15/ee82ee/000000?text=+" /> |
+| indigo  | <img src="https://via.placeholder.com/15/4b0082/ffffff?text=+" /> |
+| blue    | <img src="https://via.placeholder.com/15/0000ff/ffffff?text=+" /> |
+| cyan    | <img src="https://via.placeholder.com/15/00ffff/000000?text=+" /> |
+| jade    | <img src="https://via.placeholder.com/15/2e8b57/ffffff?text=+" /> |
+| green   | <img src="https://via.placeholder.com/15/008000/ffffff?text=+" /> |
+| lime    | <img src="https://via.placeholder.com/15/00ff00/000000?text=+" /> |
+| yellow  | <img src="https://via.placeholder.com/15/ffff00/000000?text=+" /> |
+| pumpkin | <img src="https://via.placeholder.com/15/ff8c00/ffffff?text=+" /> |
+| orange  | <img src="https://via.placeholder.com/15/ffa500/ffffff?text=+" /> |
+| sand    | <img src="https://via.placeholder.com/15/f4a460/000000?text=+" /> |
+| grey    | <img src="https://via.placeholder.com/15/808080/ffffff?text=+" /> |
+| zinc    | <img src="https://via.placeholder.com/15/a9a9a9/ffffff?text=+" /> |
+| slate   | <img src="https://via.placeholder.com/15/708090/ffffff?text=+" /> |
 
 Example:
 
