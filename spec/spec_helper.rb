@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-require "picocss/gem"
 require "bundler/setup"
-require "picocss"
+require "rspec"
 require "fileutils"
-require "rails/generators/test_case"
-require "generators/picocss/install_generator"
+
+$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
+
+require "picocss"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

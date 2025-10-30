@@ -1,0 +1,44 @@
+name: Verify RubyGem Integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  verify:
+    name: Verify SHA-256 of Published Gem
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+
+      - name: Fetch latest gem
+        run: |
+          # Substitua pelo nome da sua gem
+          GEM_NAME=picocss-gem
+          # Substitua pela versão que deseja verificar
+          GEM_VERSION=0.2.0
+          gem fetch $GEM_NAME -v $GEM_VERSION
+          REMOTE_FILE="$GEM_NAME-$GEM_VERSION.gem"
+          echo "Downloaded $REMOTE_FILE"
+
+      - name: Calculate SHA-256
+        run: |
+          REMOTE_FILE="picocss-gem-0.2.0.gem"
+          REMOTE_SHA=$(shasum -a 256 $REMOTE_FILE | cut -d ' ' -f1)
+          echo "SHA-256 of downloaded gem: $REMOTE_SHA"
+          # Compare com o valor oficial do RubyGems
+          OFFICIAL_SHA="e19b8310205f4db7dd5f56c3b689de482c3204dbcac4c1c4ed698aa9f2a48d53"
+          if [ "$REMOTE_SHA" != "$OFFICIAL_SHA" ]; then
+            echo "❌ SHA-256 mismatch! Published gem may be corrupted or modified."
+            exit 1
+          else
+            echo "✅ SHA-256 match! Published gem is correct."
+          fi

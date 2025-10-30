@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 require "spec_helper"
+require "fileutils"
 
-RSpec.describe "Exemplo de tela de login com PicoCSS" do
+RSpec.describe "\e[36m-------------------- Exemplo de tela de login com PicoCSS --------------------\e[0m\n" do
   let(:output_dir) { File.expand_path("../../tmp/examples", __dir__) }
   let(:html_path) { File.join(output_dir, "login_example.html") }
+
+  after(:all) do
+    puts "\n\e[36m-------------------- Fim Login Example --------------------\e[0m\n"
+  end
 
   before do
     FileUtils.mkdir_p(output_dir)

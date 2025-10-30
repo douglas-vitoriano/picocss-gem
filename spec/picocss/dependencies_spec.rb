@@ -2,7 +2,11 @@
 
 require "spec_helper"
 
-RSpec.describe "Gem dependencies" do
+RSpec.describe "\e[32m-------------------- Gem Dependencies --------------------\e[0m\n" do
+  after(:all) do
+    puts "\n\e[32m-------------------- Fim Gem Dependencies --------------------\e[0m\n"
+  end
+
   it "tem bundler >= 2.0" do
     expect(Bundler::VERSION.to_f).to be >= 2.0
   end

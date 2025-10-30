@@ -2,8 +2,12 @@
 
 require "spec_helper"
 
-RSpec.describe "Picocss assets" do
+RSpec.describe "\e[36m-------------------- Picocss Assets --------------------\e[0m\n"  do
   let(:css_path) { File.expand_path("../../../vendor/assets/stylesheets/pico.min.css", __FILE__) }
+
+  after(:all) do
+    puts "\n\e[36m-------------------- Fim Picocss Assets ----------------\e[0m\n"
+  end
 
   it "Quando o arquivo pico.min.css esta presente - When the pico.min.css file is present" do
     expect(File).to exist(css_path)

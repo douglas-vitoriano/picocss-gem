@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
 require "spec_helper"
+require "fileutils"
 
-RSpec.describe "Exemplos de temas PicoCSS" do
+RSpec.describe "\e[33m-------------------- Exemplos de temas PicoCSS --------------------\e[0m\n" do
   let(:output_dir) { File.expand_path("../../tmp/theme_examples", __dir__) }
+
+  after(:all) do
+    puts "\n\e[33m-------------------- Theme Examples --------------------\e[0m\n"
+  end
 
   before do
     FileUtils.mkdir_p(output_dir)
@@ -12,8 +17,8 @@ RSpec.describe "Exemplos de temas PicoCSS" do
   themes = %w[
     red pink fuchsia purple violet indigo blue
     cyan jade green lime yellow amber pumpkin
-    orange sand grey zinc slate
-  ]
+    orange sand grey zinc slate min
+  ].freeze
 
   themes.each do |color|
     it "gera exemplo HTML com o tema #{color}" do
